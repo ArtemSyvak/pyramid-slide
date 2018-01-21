@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resize pyramid</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+
+<form class="form-inline">
+    <div class="form-group pr-4">
+        <label for="choose-symbols" class="pr-2">Choose symbols</label>
+        <select class="form-control" id="choose-symbols" onchange="drawPyramid(updateOutput(),updateSelect())">
+            <option>#</option>
+            <option>@</option>
+            <option>$</option>
+            <option>X</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="range-input" class="pr-2">How high?</label>
+        <input id="range-input" type="range" name="points" min="0" max="20" value="8" oninput="drawPyramid(updateOutput(),updateSelect())">
+        <output for="range-input" id="height">&nbsp;&nbsp;8</output>
+    </div>
+</form>
+<br>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-4">
+            <div id="pyramid"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>

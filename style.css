@@ -1,0 +1,27 @@
+body{
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+}
+
+#block{
+    float: right;
+}
+#range-input{
+    display: block;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;: none;
+    height: 4px;
+    background: aquamarine;
+}
+#range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: orangered;
+    margin-top: -2px;
+}
